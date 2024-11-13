@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.microphone" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProyectoEnsenarte"
+        tools:targetApi="31">
+        <activity
+            android:name=".dictionary.testing.ui.DictionaryTestingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_dictionary"
+            android:theme="@style/Theme.ProyectoEnsenarte" />
+        <!-- - Main Acti@vity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- - Authentication Activit@ies -->
+        <activity android:name=".CrearCuentaActivity" />
+        <activity android:name=".IniciarSesionActivity" />
+        <activity android:name=".authentication.ForgotPasswordActivity" /> <!-- - Dictionary Activities -->
+        <activity android:name=".dictionary.testing.DictionaryTestingActivity" />
+        <activity
+            android:name=".dictionary.DetallePorLetraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dictionary.DetallePorCategoriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dictionary.DetallePalabraActivity"
+            android:exported="true" /> <!-- - Information Activities -->
+        <!-- - Learning Activities -->
+        <activity
+            android:name=".learning.LearningFragmentActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.ScrollableMapActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Exercise1Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Lesson4Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Lesson5Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.CorrectResultBottomSheet"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Exercise3Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.ActivityExcercise4"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.ActivityExercise5"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Lesson1Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.LeccionTerminadaActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Lesson2Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.ActivityExercise2"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.Lesson3Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.ActivityTestInfo"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.TestAndinaLevelActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.LeccionRepasadaActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".learning.ActivityExercise6"
+            android:exported="true"></activity> <!-- - Onboarding Activities@ -->
+        <activity
+            android:name=".onboarding.SliderActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".onboarding.OnboardingOneActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".onboarding.OnboardingTwoActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".onboarding.OnboardingThreeActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".BottomNavigationActivity"
+            android:exported="true"></activity> <!-- - Profile Activities -->
+        <activity
+            android:name=".profile.SettingsProfileActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".profile.StatisticsProfileActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".profile.ZoomInsigniaActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".profile.RewardProfileActivity"
+            android:exported="true"></activity> <!-- - Video Activities -->
+        <activity
+            android:name=".video.CameraRecordingActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".video.ProcessingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".video.CorrectResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".video.IncorrectResultActivity"
+            android:exported="false" /> <!-- - Buttons Activities -->
+        <activity
+            android:name=".buttons.ButtonsActivity"
+            android:exported="true"></activity>
+    </application>
+
+</manifest>
